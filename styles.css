@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  padding: 40px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn{
+  font: inherit;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+
+/* nuevas funcionalidades */
+
+.btn:hover + .img{
+  display: block;
+  transform: translateY(0) rotate(0) ;
+  opacity: 1;
+
+}
+.img{
+  opacity: 0;
+  display: none;
+  transform: translateY(200px) rotate(360deg);
+  transition: display 2s, opacity .5s, transform .5s;
+  transition-behavior: allow-discrete;
+  width: 300px;
+  margin-top: 40px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 20px 2px crimson;
+}
+
+@starting-style{
+  .btn:hover + .img{
+    opacity:0;
+    transform:translateY(200px) rotate(360deg)
+  }
+}
+
